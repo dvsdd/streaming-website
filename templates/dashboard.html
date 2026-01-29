@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Dashboard</h2>
+        <form action="/create_channel" method="POST">
+            <h3>Create Channel</h3>
+            <label for="channel_name">Channel Name:</label>
+            <input type="text" id="channel_name" name="channel_name" required><br>
+            <label for="channel_password">Channel Password:</label>
+            <input type="password" id="channel_password" name="channel_password" required><br>
+            <label for="description">Description:</label>
+            <input type="text" id="description" name="description" required><br>
+            <input type="submit" value="Create Channel">
+        </form>
+
+        <form action="/upload_content" method="POST">
+            <h3>Upload Content</h3>
+            <label for="channel_id">Channel ID:</label>
+            <input type="text" id="channel_id" name="channel_id" required><br>
+            <label for="channel_password">Channel Password:</label>
+            <input type="password" id="channel_password" name="channel_password" required><br>
+            <label for="content_type">Content Type:</label>
+            <select id="content_type" name="content_type" required>
+                <option value="video">Video</option>
+                <option value="image">Image</option>
+            </select><br>
+            <label for="content_name">Content Name:</label>
+            <input type="text" id="content_name" name="content_name" required><br>
+            <label for="content_data">Content Data:</label>
+            <input type="text" id="content_data" name="content_data" required><br>
+            <label for="content_description">Content Description:</label>
+            <input type="text" id="content_description" name="content_description" required><br>
+            <input type="submit" value="Upload Content">
+        </form>
+
+        <form action="/search" method="POST">
+            <h3>Search Content</h3>
+            <label for="search_image">Search Image:</label>
+            <input type="text" id="search_image" name="search_image"><br>
+            <label for="search_video">Search Video:</label>
+            <input type="text" id="search_video" name="search_video"><br>
+            <input type="submit" value="Search">
+        </form>
+    </div>
+</body>
+</html>
